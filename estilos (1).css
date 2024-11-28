@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 :root {
-    --primary-color: #005CAB;
+    --primary-color: #003664;
     --primary-dark: #003664;
     --secondary-color: #4A90E2;
     --accent-color: #FF6B6B;
@@ -19,6 +19,7 @@ body {
     background-color: var(--light-bg);
     color: var(--light-text);
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -34,9 +35,10 @@ body.dark-mode {
 .dark-mode .article-title {
     color: var(--secondary-color);
 }
-.dark-mode .bibliografia{
+.dark-mode .bibliografia, .dark-mode .bibliografia-2{
     color: #d7d7d7;
 }
+
 .dark-mode-toggle {
     position: fixed;
     top: 20px;
@@ -132,11 +134,11 @@ body.dark-mode {
     .article-main { grid-column: span 8; }
     .article-half { grid-column: span 6; }
     .article-sidebar { grid-column: span 4; }
+    
 }
 
 footer {
     margin-top: 2rem;
-    padding: 1rem 0;
     background-color: var(--primary-color);
     color: white;
 }
@@ -246,8 +248,8 @@ footer {
 }
 .img-container-banner{
     margin-top: -2rem;
-    width: 65vw;
-    height: 30rem;
+    width: 80vw;
+    height: 20rem;
     position: relative;
     overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
     border-radius: 8px; /* Para un look más suave */
@@ -277,8 +279,9 @@ footer {
     object-fit: cover;
 }
 .img-art-2 img{
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -353,11 +356,106 @@ footer {
     gap: 2rem;
     margin-bottom: 1rem;
 }
-.bibliografia-2{
+/* .bibliografia-2{
 
     font-size: 0.75rem;
     color: #666;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.25rem;
     border-radius: 3px;
+} */
+/* Estilo para la nueva variante de img-container */
+.img-container-modified {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Ajusta el tamaño total de la imagen */
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
+
+/* Estilo para el contenedor que envuelve la imagen */
+.img-wrapper-modified {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para redimensionar la imagen y ajustarla */
+.img-art-2-modified img {
+    max-width: 100%; /* Imagen ajustada al ancho disponible */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: cover; /* Ajusta para cubrir el contenedor */
+    border-radius: 8px; /* Añade esquinas redondeadas, si lo prefieres */
+}
+
+/* Estilo para las bibliografías nuevas */
+.bibliografias-modified {
+    text-align: left;
+    width: 100%;
+}
+
+.bibliografia-modified {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 0.25rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+}
+
+/* Estilo para la nueva variante de img-wrapper con dos imágenes */
+.img-wrapper-modified {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Espacio entre imágenes */
+    margin-bottom: 2rem;
+    width: 100%;
+}
+.img-wrapper-modified-2 {
+    display: flex;
+    flex-direction: row; /* Cambiado a row para alinear horizontalmente */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* Contenedor para cada imagen y su bibliografía */
+.img-art-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 45%; /* Limita el ancho para que quepan dos imágenes */
+}
+
+.img-art-3 img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bibliografia-2 {
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 0.5rem; /* Espacio entre la imagen y la bibliografía */
+    width: 100%; /* Asegura que la bibliografía tome el ancho del contenedor */
+}
+.bibliografia-3{
+    font-size: 0.75rem;
+    color: #f8f9fa;
+}
+@media (max-width: 768px) {
+    .newspaper-header {
+        padding: 1rem 0;
+        width: 100vh;
+    }
+    footer{
+        width: 100vh;
+    }
+}
+
